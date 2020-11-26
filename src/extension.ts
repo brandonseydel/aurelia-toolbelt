@@ -25,10 +25,10 @@ interface PackageContents {
 const getCustomElementSignature = (packageFileContents: PackageContents | undefined, kebabCase: string, styleFileType: string | undefined) => {
   const containsAurelia = !packageFileContents || (packageFileContents.dependencies && packageFileContents.dependencies['aurelia']);
   if (containsAurelia) {
-    return `import { ICustomElementViewModel } from 'aurelia';\n`;
+    return `import { IViewModel } from 'aurelia';\n`;
   }
   const importStatement = `import template from './${kebabCase}.html';\n'`;
-  const customElementImport = `import { customElement, ICustomElementViewModel } from '@aurelia/runtime-html';\n`;
+  const customElementImport = `import { customElement, IViewModel } from '@aurelia/runtime-html';\n`;
   const styleImport = styleFileType && `import './${kebabCase}.${styleFileType?.toLowerCase()}';\n`;
   const customElementRegistration = `\n@customElement({ name: '${kebabCase}', template })\n`;
 

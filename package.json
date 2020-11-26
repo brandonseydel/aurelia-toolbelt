@@ -2,7 +2,7 @@
   "name": "aurelia-tools",
   "displayName": "Aurelia Tools",
   "description": "An Aurelia 2 toolbelt that will simplify your life 😁",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "icon": "images/icon.png",
   "publisher": "brandonseydel",
   "author": {
