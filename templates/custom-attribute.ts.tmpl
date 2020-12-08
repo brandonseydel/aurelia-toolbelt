@@ -1,0 +1,19 @@
+{{{customAttributeSignature}}}
+export class {{{pascalCaseName}}} implements ICustomAttributeViewModel {
+
+  @bindable()
+  value: unknown; // replace with type
+
+  constructor(private readonly element: Element /* HTMLElement for styling */) {
+  }
+
+  public afterBind(): void {
+    /* Place Code In Here */
+    // this.element.classList.add(value);
+  }
+
+  /* Example of change detection */
+  public valueChanged(): void {
+    this.afterBind();
+  }
+}

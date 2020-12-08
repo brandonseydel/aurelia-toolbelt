@@ -2,7 +2,7 @@
   "name": "aurelia-tools",
   "displayName": "Aurelia Tools",
   "description": "An Aurelia 2 toolbelt that will simplify your life 😁",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "icon": "images/icon.png",
   "publisher": "brandonseydel",
   "author": {
@@ -48,6 +48,11 @@
           "type": "boolean",
           "default": true,
           "description": "Shows or hides the menu item."
+        },
+        "aurelia2-files.menu.custom-attribute": {
+          "type": "boolean",
+          "default": true,
+          "description": "Shows or hides the menu item."
         }
       }
     },
@@ -59,6 +64,10 @@
       {
         "command": "extension.addAureliaCustomElementHtml",
         "title": "Generate Custom Element Html Only"
+      },
+      {
+        "command": "extension.addAureliaCustomAttribute",
+        "title": "Generate Custom Attribute"
       }
     ],
     "menus": {
@@ -72,6 +81,10 @@
           "when": "config.aurelia2-files.menu.custom-element-html",
           "command": "extension.addAureliaCustomElementHtml",
           "group": "Aurelia2"
+        },
+        {
+          "command": "config.aurelia2-files.menu.custom-attribute",
+          "title": "Generate Custom Attribute"
         }
       ]
     }
@@ -98,6 +111,7 @@
     "copy-webpack-plugin": "^6.3.1",
     "eslint": "^7.9.0",
     "glob": "^7.1.6",
+    "handlebars": "^4.7.6",
     "mocha": "^8.1.3",
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",

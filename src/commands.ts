@@ -4,5 +4,6 @@ import { CommandType } from './enums/command-type';
 
 export const commandsMap = new Map<CommandType, ICommand>([
   [CommandType.CustomElement, { fileName: 'custom-element', resource: ResourceType.CustomElement }],
+  [CommandType.CustomAttribute, { fileName: 'custom-attribute', resource: ResourceType.CustomAttribute }],
   [CommandType.CustomElementHtmlOnly, { fileName: 'custom-element-html-only', resource: ResourceType.CustomElementHtml }],
 ]);
