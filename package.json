@@ -2,7 +2,7 @@
   "name": "aurelia-tools",
   "displayName": "Aurelia Tools",
   "description": "An Aurelia 2 toolbelt that will simplify your life 😁",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "icon": "images/icon.png",
   "publisher": "brandonseydel",
   "author": {
@@ -35,6 +35,11 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
+    "html": {
+      "customData": [
+        "./data/aurelia-html-contribution.json"
+      ]
+    },
     "configuration": {
       "type": "object",
       "title": "Aurelia Toolbelt Configuration Settings",
@@ -56,7 +61,62 @@
         }
       }
     },
+    "languages": [
+      {
+        "id": "html",
+        "order": 1,
+        "extensions": [
+          ".html",
+          ".htm",
+          ".shtml",
+          ".xhtml",
+          ".mdoc",
+          ".jsp",
+          ".asp",
+          ".aspx",
+          ".jshtm",
+          ".volt",
+          ".ejs",
+          ".au"
+        ],
+        "aliases": [
+          "HTML",
+          "htm",
+          "html",
+          "xhtml"
+        ],
+        "mimetypes": [
+          "text/html",
+          "text/x-jshtm",
+          "text/template",
+          "text/ng-template",
+          "application/xhtml+xml"
+        ],
+        "embeddedLanguages": {
+          "text.html": "html",
+          "source.css": "css",
+          "source.js": "javascript",
+          "source.python": "python",
+          "source.smarty": "smarty"
+        },
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/typescript.json"
+      },
+      {
+        "language": "html",
+        "path": "./snippets/html.json"
+      }
+    ],
     "commands": [
+      {
+        "command": "extension.generateAureliaProject",
+        "title": "Generate Aurelia Application"
+      },
       {
         "command": "extension.addAureliaCustomElement",
         "title": "Generate Custom Element"
@@ -68,6 +128,13 @@
       {
         "command": "extension.addAureliaCustomAttribute",
         "title": "Generate Custom Attribute"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "html",
+        "scopeName": "au.html",
+        "path": "./syntaxes/html.json"
       }
     ],
     "menus": {
@@ -83,8 +150,9 @@
           "group": "Aurelia2"
         },
         {
-          "command": "config.aurelia2-files.menu.custom-attribute",
-          "title": "Generate Custom Attribute"
+          "when": "config.aurelia2-files.menu.custom-attribute",
+          "command": "extension.addAureliaCustomAttribute",
+          "group": "Aurelia2"
         }
       ]
     }
@@ -101,6 +169,7 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@aurelia/testing": "dev",
     "@ts-morph/bootstrap": "^0.7.0",
     "@types/glob": "^7.1.3",
     "@types/mocha": "^8.0.0",
@@ -108,11 +177,13 @@
     "@types/vscode": "^1.51.0",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
+    "aurelia": "dev",
     "copy-webpack-plugin": "^6.3.1",
     "eslint": "^7.9.0",
     "glob": "^7.1.6",
     "handlebars": "^4.7.6",
     "mocha": "^8.1.3",
+    "node-html-parser": "^2.0.0",
     "ts-loader": "^8.0.3",
     "typescript": "^4.0.2",
     "vscode-test": "^1.4.0",

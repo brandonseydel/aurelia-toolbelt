@@ -1,0 +1,87 @@
+{
+  "Aurelia If Attribute": {
+    "prefix": "if.bind",
+    "body": ["if.bind=\"${expression}\""],
+    "description": "Adds/Removes element from the DOM"
+  },
+  "Aurelia With Attribute": {
+    "prefix": "with.bind",
+    "body": ["with.bind=\"${expression}\""],
+    "description": "The element will now be in scope rather than accessing through property e.g. ${object.test} -> with.bind -> ${test}"
+  },
+  "Aurelia Event": {
+    "prefix": [".delegate", ".trigger"],
+    "body": [".${1|delegate,trigger|}=\"${function}\""],
+    "description": "Binds a function to be called on the view model to the event e.g. click.delegate=\"clicked()\""
+  },
+  "Aurelia Bind": {
+    "prefix": [".bind"],
+    "body": [".${1|bind,two-way,from-view,to-view,one-time|}=\"${function}\""],
+    "description": "Binds a function to be called on the view model to the event e.g. click.delegate=\"clicked()\""
+  },
+  "Aurelia Repeat": {
+    "prefix": "repeat.for",
+    "body": ["repeat.for=\"${item} of ${collection}\""],
+    "description": "Iterates over a collection>See here for more info</a>"
+  },
+  "Aurelia Repeat By number": {
+    "prefix": "repeat.for",
+    "body": ["repeat.for=\"${item} of ${numberOfTimesToRepeat}\""],
+    "description": "Iterates X times based on the numberOfTimesToRepeat *Useful for prototypes and mocking data or lazy loading"
+  },
+  "Aurelia Style Attribute": {
+    "prefix": "style.bind",
+    "body": ["style.bind=\"${binding}\""],
+    "description": "Allows binding a string, object, or array to a style attribute"
+  },
+  "Aurelia Show Attribute": {
+    "prefix": "show.bind",
+    "body": ["show.bind=\"${binding}\""],
+    "description": "Toggles a display none on the element"
+  },
+  "Aurelia View Model": {
+    "prefix": "view-model.bind",
+    "body": ["view-model.bind=\"${binding}\""],
+    "description": "Binds a particular view model to the html"
+  },
+  "Aurelia Compose": {
+    "prefix": "compose",
+    "body": ["<compose view=\"${url}\" ${view-model=\"${item}\"}></compose>"],
+    "description": "Allows to select the html and view model to run usually used in a dynamic scenario"
+  },
+  "Import": {
+    "prefix": "import",
+    "body": ["<import from=\"${url}\"></import>"],
+    "description": "Allows importing of references in HTML"
+  },
+  "Aurelia As Custom Element": {
+    "prefix": "as-custom-element",
+    "body": ["as-custom-element=\"${elementName}\""],
+    "description": "Makes a tag inerit the view model of the as custom element."
+  },
+  "Aurelia Slot - Named": {
+    "prefix": "<au-slot",
+    "body": ["<au-slot name=\"${name}\"></au-slot>"],
+    "description": "Aurelia named slot"
+  },
+  "Aurelia Slot - Default": {
+    "prefix": "<au-slot>",
+    "body": ["<au-slot></au-slot>"],
+    "description": ""
+  },
+  "Aurelia Viewport": {
+    "prefix": "<au-viewport>",
+    "body": ["<au-viewport></au-viewport>"],
+    "description": "Aurelia Viewport"
+  },
+  "Aurelia Viewport With Default": {
+    "prefix": "<au-viewport",
+    "body": ["<au-viewport default=\"${name}\"></au-viewport>"],
+    "description": "Aurelia Viewport With Default"
+  },
+  "Aurelia Viewport With Default + Parameter": {
+    "prefix": "<au-viewport",
+    "body": ["<au-viewport default=\"${name}(id=${id})\"></au-viewport>"],
+    "description": "Aurelia Viewport With Default + Parameter"
+  }
+}

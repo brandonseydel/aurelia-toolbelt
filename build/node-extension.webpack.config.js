@@ -43,6 +43,10 @@ const config = {
     new CopyPlugin({
       patterns: [
         { from: "templates", to: "templates" },
+        { from: "data", to: "data" },
+        { from: "syntaxes", to: "syntaxes" },
+        { from: "snippets", to: "snippets" },
+        { from: "language-configuration.json", to: "." },
       ],
       options: {
         concurrency: 100,

@@ -17,7 +17,7 @@
       "include": "#compose.html.au"
     },
     {
-      "include": "#router-view.html.au"
+      "include": "#element.html.au"
     },
     {
       "include": "#let.html.au"
@@ -755,7 +755,7 @@
           "include": "#tag-aurelia-show-attribute"
         },
         {
-          "include": "#tag-aurelia-route-href-attribute"
+          "include": "#tag-aurelia-goto-attribute"
         },
         {
           "include": "#tag-aurelia-containerless-attribute"
@@ -767,7 +767,7 @@
           "include": "#tag-aurelia-view-spy-attribute"
         },
         {
-          "include": "#tag-aurelia-replace-part-attribute"
+          "include": "#tag-aurelia-slot-name-attribute"
         },
         {
           "include": "#tag-aurelia-bindable-attribute"
@@ -785,7 +785,7 @@
           "include": "#tag-aurelia-ref-attribute"
         },
         {
-          "include": "#tag-aurelia-replaceable-attribute"
+          "include": "#tag-aurelia-au-slow-attribute"
         },
         {
           "include": "#tag-aurelia-as-element-attribute"
@@ -851,14 +851,14 @@
         }
       ]
     },
-    "router-view.html.au": {
-      "begin": "(<\/?)((?i:router\\-view)\\b)",
+    "element.html.au": {
+      "begin": "(<\/?)((?i:au-\\S*)\\b)",
       "beginCaptures": {
         "1": {
           "name": "punctuation.definition.tag.begin.html"
         },
         "2": {
-          "name": "router-view.element.html.au"
+          "name": "aurelia.element.html.au"
         }
       },
       "end": "(>)",
@@ -898,7 +898,7 @@
       ]
     },
     "tag-aurelia-attribute-with-databinding-attribute": {
-      "match": "(?<![\"'-])([a-zA-Z0-9:-]+)(?<!controller|bindable|view-model|show|if|naive-if|route-href)(\\.)(bind|one-way|two-way|one-time|from-view|to-view)(?![\"'-;])",
+      "match": "(?<![\"'-])([a-zA-Z0-9:-]+)(?<!controller|bindable|view-model|show|if|naive-if|goto)(\\.)(bind|one-way|two-way|one-time|from-view|to-view)(?![\"'-;])",
       "captures": {
         "1": {
           "name": "entity.other.attribute-name.html"
@@ -1092,11 +1092,11 @@
         }
       }
     },
-    "tag-aurelia-route-href-attribute": {
-      "match": "(?<=[^\"-])(route-href)(?![-])(\\.)?(bind|one-way|two-way|one-time|from-view|to-view)?",
+    "tag-aurelia-goto-attribute": {
+      "match": "(?<![\"'-])(goto)=",
       "captures": {
         "1": {
-          "name": "route-href.attribute.html.au"
+          "name": "goto.attribute.html.au"
         },
         "2": {
           "name": "punctuation.definition.tag.begin.html"
@@ -1132,19 +1132,19 @@
         }
       }
     },
-    "tag-aurelia-replace-part-attribute": {
-      "match": "(?<![\"'-])\\b(replace-part)(?=\\=)\\b",
+    "tag-aurelia-slot-name--attribute": {
+      "match": "(?<![\"'-])(name)=",
       "captures": {
         "1": {
-          "name": "replace-part.attribute.html.au"
+          "name": "slot-name.attribute.html.au"
         }
       }
     },
-    "tag-aurelia-replaceable-attribute": {
-      "match": "(?<!\"')\\b[^=-](replaceable)(?!-)\\b",
+    "tag-aurelia-au-slot-attribute": {
+      "match": "(?<![\"'-])(au-slot)=",
       "captures": {
         "1": {
-          "name": "replaceable.attribute.html.au"
+          "name": "au-slot.attribute.html.au"
         }
       }
     }

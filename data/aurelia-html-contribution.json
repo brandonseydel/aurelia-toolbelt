@@ -1,0 +1,25 @@
+{
+  "tags": [
+    {
+      "name": "au-slot",
+      "description": "Slot used for projection",
+      "attributes": [{ "name": "name" }]
+    }
+  ],
+  "globalAttributes": [
+    { "name": "show", "description": "Hides/Shows element" },
+    { "name": "if", "description": "Removes/Adds element" },
+    { "name": "repeat.for", "description": "Repeater" }
+  ],
+  "valueSets": [
+    {
+      "name": "x",
+      "values": [
+        {
+          "name": "xval",
+          "description": "x value"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Aurelia Toolbelt data binding attribute",
+    "scope": [
+      "repeat.attribute.html.au",
+      "for.attribute.html.au",
+      "show.attribute.html.au",
+      "databinding.attribute.html.au",
+      "punctuation.definition.string.interpolation.start",
+      "punctuation.definition.string.interpolation.end",
+      "aurelia.element.html.au",
+      "au-slot.attribute.html.au"
+    ],
+    "settings": {
+      "foreground": "#F81894"
+    }
+  },
+  {
+    "name": "Aurelia Toolbelt Event ",
+    "scope": ["invoke.attribute.html.au"],
+    "settings": {
+      "foreground": "#6D50A2"
+    }
+  },
+  {
+    "name": "Aurelia Toolbelt data binding attribute",
+    "scope": [
+      "if.attribute.html.au",
+      "bindable.attribute.html.au",
+      "containerless.attribute.html.au",
+      "view-model.attribute.html.au",
+      "matcher.attribute.html.au",
+      "goto.attribute.html.au",
+      "show.attribute.html.au",
+      "as-element.attribute.html.au",
+      "model.attribute.html.au",
+      "controller.attribute.html.au",
+      "view.attribute.html.au",
+      "ref.attribute.html.au",
+      "with.attribute.html.au",
+      "repeat.attribute.html.au"
+    ],
+    "settings": {
+      "foreground": "#A81894",
+      "fontStyle": "italic"
+    }
+  }
+]
